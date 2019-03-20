@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+{{ template "front_header" . }}
+<script>
+window.onload = function () {
+    var oH2 = document.getElementById("mnavh");
+    var oUl = document.getElementById("starlist");
+    oH2.onclick = function () {
+        var style = oUl.style;
+        style.display = style.display == "block" ? "none" : "block";
+        oH2.className = style.display == "block" ? "open" : ""
+    }
+}
+</script>
+
+<div class="blank"></div>
+<article>
+    <div class="leftbox">
+        <div class="infos">
+            <div class="newsview">
+                <h2 class="intitle">您现在的位置是：<a href="/">网站首页</a>&nbsp;&gt;&nbsp;<a href="/">关于我</a></h2>
+                <div class="news_infos">
+                </div>
+            </div>
+        </div>
+        <div class="news_pl">
+            <h2>我要留言</h2>
+            <ul>
+            </ul>
+        </div>
+    </div>
+    {{template "right_box" .}}
+</article>
+{{template "front_footer" .}}
+</body>
+</html>

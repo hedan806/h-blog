@@ -1,0 +1,43 @@
+{{ define "front_header" }}
+    <head>
+        <title>首页_Honlyc 个人博客 - 一个亦步亦趋行走在后端之路的个人博客网站</title>
+        <meta name="keywords" content="个人博客,Honlyc 个人博客,Go,golan,java,python,Honlyc "/>
+        <meta name="description" content="Honlyc 个人博客，分享个人生活、工作、学习的自由之地。"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="/assets/css/base.css" rel="stylesheet">
+        <link href="/assets/css/index.css" rel="stylesheet">
+        <link href="/assets/css/m.css" rel="stylesheet">
+        <!--[if lt IE 9]>
+        <script src="/assets/js/modernizr.js"></script>
+        <![endif]-->
+        <script src="/assets/js/page.js"></script>
+    </head>
+    <body>
+    <header>
+        <div id="mnav">
+            <div class="logo"><a href="/">Honlyc 个人博客</a></div>
+            <h2 id="mnavh"><span class="navicon"></span></h2>
+            <ul id="starlist">
+                <li><a href="/">网站首页</a></li>
+                <li><a href="/golang">Golang</a></li>
+                <li><a href="/about">关于我</a></li>
+                {{/*<li><a href="list.html">学无止境</a></li>*/}}
+                {{/*<li><a href="info.html">慢生活</a></li>*/}}
+                {{/*<li><a href="shareinfo.html">模板内容页</a></li>*/}}
+                {{/*<li><a href="gbook.html">留言</a></li>*/}}
+            </ul>
+        </div>
+        <script>
+        window.onload = function () {
+            var oH2 = document.getElementById("mnavh");
+            var oUl = document.getElementById("starlist");
+            oH2.onclick = function () {
+                var style = oUl.style;
+                style.display = style.display == "block" ? "none" : "block";
+                oH2.className = style.display == "block" ? "open" : ""
+            }
+        }
+        </script>
+    </header>
+    <div class="line46"></div>
+{{ end }}
