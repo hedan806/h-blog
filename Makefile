@@ -9,9 +9,9 @@ BINARY_NAME=h-blog
 BINARY_UNIX=$(BINARY_NAME)-unix
 
 VERSION=0.0.1
-DOCKER_NAME=honlyc/h-blog:$(VERSION)
+DOCKER_NAME=hedan806/h-blog:$(VERSION)
 
-all: build-linux build-docker
+all: build-linux build-docker push-docker
 
 # Cross compilation
 build-linux:
